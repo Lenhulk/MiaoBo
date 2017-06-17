@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kRK-Wc-3jc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Care View Controller-->
+        <scene sceneID="ZRD-Np-khQ">
+            <objects>
+                <viewController id="kRK-Wc-3jc" customClass="LTCareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DKf-TM-WVn"/>
+                        <viewControllerLayoutGuide type="bottom" id="CQQ-tt-rDv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Lh-X4-tog">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_follow_250x247" translatesAutoresizingMaskIntoConstraints="NO" id="9RW-q4-6nN">
+                                <rect key="frame" x="62" y="120" width="250" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Hug-nA-Vo4"/>
+                                    <constraint firstAttribute="height" constant="247" id="xxQ-bJ-uN9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你还没有关注的主播哦！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybl-eD-rJ4">
+                                <rect key="frame" x="92" y="417" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-Pk-yQU">
+                                <rect key="frame" x="40" y="498" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eG1-47-KQy"/>
+                                </constraints>
+                                <state key="normal" title="去看当前的热门直播">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSeeHotLiving:" destination="kRK-Wc-3jc" eventType="touchUpInside" id="pT5-hM-HSZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9RW-q4-6nN" firstAttribute="centerY" secondItem="3Lh-X4-tog" secondAttribute="centerY" constant="-90" id="7eN-Ca-Rlk"/>
+                            <constraint firstItem="Nj6-Pk-yQU" firstAttribute="centerX" secondItem="ybl-eD-rJ4" secondAttribute="centerX" id="9pp-lV-Jbk"/>
+                            <constraint firstItem="ybl-eD-rJ4" firstAttribute="centerX" secondItem="3Lh-X4-tog" secondAttribute="centerX" id="9zi-GV-YG7"/>
+                            <constraint firstItem="9RW-q4-6nN" firstAttribute="centerX" secondItem="3Lh-X4-tog" secondAttribute="centerX" id="AJj-eD-AQF"/>
+                            <constraint firstItem="Nj6-Pk-yQU" firstAttribute="leading" secondItem="3Lh-X4-tog" secondAttribute="leadingMargin" constant="24" id="CgS-6H-aee"/>
+                            <constraint firstItem="Nj6-Pk-yQU" firstAttribute="top" secondItem="ybl-eD-rJ4" secondAttribute="bottom" constant="60" id="WGg-JA-cyd"/>
+                            <constraint firstItem="ybl-eD-rJ4" firstAttribute="top" secondItem="9RW-q4-6nN" secondAttribute="bottom" constant="50" id="alz-hr-QBR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="toSeeBtn" destination="Nj6-Pk-yQU" id="1gW-Rh-PP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWa-ab-cLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="-22"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no_follow_250x247" width="250" height="247"/>
+    </resources>
+</document>

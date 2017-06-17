@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cgE-se-XV4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Show Time View Controller-->
+        <scene sceneID="EFX-ND-wvd">
+            <objects>
+                <viewController id="cgE-se-XV4" customClass="LTShowTimeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g4i-1z-dHt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rdx-rr-UGG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pCv-0W-h1V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cy-Ln-35G">
+                                <rect key="frame" x="20" y="30" width="157" height="22"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15367353719999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title=" 智能美颜已开启 " image="icon_beautifulface"/>
+                                <connections>
+                                    <action selector="changeBeautyMode:" destination="cgE-se-XV4" eventType="touchUpInside" id="opU-Bb-yyK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-F2-eLv">
+                                <rect key="frame" x="263" y="23" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="3CW-bM-JDQ"/>
+                                    <constraint firstAttribute="width" constant="36" id="vUP-jn-eaL"/>
+                                </constraints>
+                                <state key="normal" image="camera_change_40x40_"/>
+                                <connections>
+                                    <action selector="exchangeCamera:" destination="cgE-se-XV4" eventType="touchUpInside" id="kzb-se-uyW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgA-R3-SOQ">
+                                <rect key="frame" x="319" y="23" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KiD-Ix-f68"/>
+                                    <constraint firstAttribute="width" constant="36" id="hUE-Id-Pb6"/>
+                                </constraints>
+                                <state key="normal" image="talk_close_36x36_"/>
+                                <connections>
+                                    <action selector="close:" destination="cgE-se-XV4" eventType="touchUpInside" id="Xcc-wm-ci3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态：未知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akx-uc-4q8">
+                                <rect key="frame" x="146.5" y="102" width="82" height="19.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15367353719999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-gH-i7A">
+                                <rect key="frame" x="40" y="567" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q7x-eO-6cV"/>
+                                </constraints>
+                                <state key="normal" title="开始直播"/>
+                                <connections>
+                                    <action selector="startLiving:" destination="cgE-se-XV4" eventType="touchUpInside" id="beQ-vl-8gx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Cy-Ln-35G" firstAttribute="leading" secondItem="pCv-0W-h1V" secondAttribute="leading" constant="20" id="8FG-u2-ckZ"/>
+                            <constraint firstItem="akx-uc-4q8" firstAttribute="centerX" secondItem="pCv-0W-h1V" secondAttribute="centerX" id="9Yv-Ud-tFf"/>
+                            <constraint firstItem="0fF-gH-i7A" firstAttribute="leading" secondItem="pCv-0W-h1V" secondAttribute="leading" constant="40" id="RW2-0z-NcR"/>
+                            <constraint firstItem="akx-uc-4q8" firstAttribute="top" secondItem="2Cy-Ln-35G" secondAttribute="bottom" constant="50" id="Z2N-Wh-IlS"/>
+                            <constraint firstItem="Rdx-rr-UGG" firstAttribute="top" secondItem="0fF-gH-i7A" secondAttribute="bottom" constant="60" id="Z9t-Y1-zD4"/>
+                            <constraint firstItem="2Cy-Ln-35G" firstAttribute="top" secondItem="g4i-1z-dHt" secondAttribute="bottom" constant="30" id="fiU-hB-D0e"/>
+                            <constraint firstAttribute="trailing" secondItem="SgA-R3-SOQ" secondAttribute="trailing" constant="20" id="fx4-6m-T5U"/>
+                            <constraint firstItem="pi1-F2-eLv" firstAttribute="centerY" secondItem="2Cy-Ln-35G" secondAttribute="centerY" id="kFv-pg-ycl"/>
+                            <constraint firstAttribute="trailing" secondItem="0fF-gH-i7A" secondAttribute="trailing" constant="40" id="lPT-xY-h3h"/>
+                            <constraint firstItem="SgA-R3-SOQ" firstAttribute="leading" secondItem="pi1-F2-eLv" secondAttribute="trailing" constant="20" id="pR6-sO-MYS"/>
+                            <constraint firstItem="SgA-R3-SOQ" firstAttribute="centerY" secondItem="2Cy-Ln-35G" secondAttribute="centerY" id="x9D-NP-WLM"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="beautyButton" destination="2Cy-Ln-35G" id="oC9-rQ-2wO"/>
+                        <outlet property="startLiving" destination="0fF-gH-i7A" id="wJC-e7-XnK"/>
+                        <outlet property="statusLabel" destination="akx-uc-4q8" id="V9R-Eg-1s3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0a-YO-cLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="-387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_change_40x40_" width="40" height="40"/>
+        <image name="icon_beautifulface" width="19" height="19"/>
+        <image name="talk_close_36x36_" width="36" height="36"/>
+    </resources>
+</document>
